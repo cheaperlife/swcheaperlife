@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>accueil</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!-- Loading Bootstrap -->
+        <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+        <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+        <link rel="stylesheet" href="bootstrap/css/prettify.css">
+
+        <!-- Loading Flat UI -->
+        <link href="css/flat-ui.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/demo.css">
+        <link href="css/style.css" rel="stylesheet">
+        <link rel="shortcut icon" href="images/favicon.ico">
+        
+        <script type="text/javascript">
+            
+            function load(){
+                $.ajax({
+                            url: 'formules.json',
+                            type: 'get',
+                            dataType: 'json',
+                            error: function(){
+                                alert("Erreur : Impossible de récupérer les données du serveur");
+                            },
+                            success: function(donnees){
+                                dataFormules = donnees;
+//                                alert(dataFormules.formules[1].price);
+                                document.getElementById('formule1').innerHTML = "Formule n°1 : " + dataFormules.formules[0].name;
+                                document.getElementById('descriptionFormule1').innerHTML = dataFormules.formules[0].description;
+                                document.getElementById('quantityFormule1').innerHTML = "Quantité : " + dataFormules.formules[0].quantity;
+                                document.getElementById('priceFormule1').innerHTML = "Total de " +dataFormules.formules[0].price+" €";
+                                document.getElementById('durationFormule1').innerHTML = "Offre valable pendant "+dataFormules.formules[0].duration+" mois" ;
+                                
+                                document.getElementById('formule2').innerHTML = "Formule n°2 : " + dataFormules.formules[1].name;
+                                document.getElementById('descriptionFormule2').innerHTML = dataFormules.formules[1].description;
+                                document.getElementById('quantityFormule2').innerHTML = "Quantité : " + dataFormules.formules[1].quantity;
+                                document.getElementById('priceFormule2').innerHTML = "Total de " +dataFormules.formules[1].price+" €";
+                                document.getElementById('durationFormule2').innerHTML = "Offre valable pendant "+dataFormules.formules[1].duration+" mois" ;
+                            }
+                        });
+            }
+            
+        </script>
+        
+    </head>
+    <body onload="load();">
+        
+        
+        <div id="formule1" >
+        </div>
+        <ul>
+            <li id="descriptionFormule1"></li>
+            <li id="quantityFormule1"></li>
+            <li id="priceFormule1"></li>
+            <li id="durationFormule1"></li>
+        </ul>
+        
+        <div id="subsbscribe1" >
+            <input type="button" id="subscribeButton1" value="m'y abonner">
+        </div>
+        
+        
+        <div id="formule2">
+        </div>
+        <ul >
+            <li id="descriptionFormule2"></li>
+            <li id="quantityFormule2"></li>
+            <li id="priceFormule2"></li>
+            <li id="durationFormule2"></li>
+        </ul>
+        
+        <div id="subsbscribe2" >
+            <input type="button" id="subscribeButton2" value="m'y abonner">
+        </div>
+            
+
+        
+        
+        
+        
+        <script src="js/jquery-1.8.3.min.js"></script>
+        <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+        <script src="js/jquery.ui.touch-punch.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap-select.js"></script>
+        <script src="js/bootstrap-switch.js"></script>
+        <script src="js/flatui-checkbox.js"></script>
+        <script src="js/flatui-radio.js"></script>
+        <script src="js/jquery.tagsinput.js"></script>
+        <script src="js/jquery.placeholder.js"></script>
+        <script src="js/jquery.stacktable.js"></script>
+        <script src="bootstrap/js/google-code-prettify/prettify.js"></script>
+        <script src="js/application.js"></script>
+    </body>
+    
+</html>

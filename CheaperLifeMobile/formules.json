@@ -1,0 +1,16 @@
+{
+    "formules": [{
+            "name" : "formule du midi",
+            "description" : "sandwich + dessert",
+            "quantity" : "10",
+            "price" : "50",
+            "duration" : "1"
+        },{
+            "name" : "formule du matin",
+            "description" : "croissant + cafe",
+            "quantity" : "10",
+            "price" : "20",
+            "duration" : "1"
+        }] 
+            
+}

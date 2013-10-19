@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>CheaperLife</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!-- Loading Bootstrap -->
+        <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+        <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+        <link rel="stylesheet" href="bootstrap/css/prettify.css">
+
+        <!-- Loading Flat UI -->
+        <link href="css/flat-ui.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/demo.css">
+        <link href="css/style.css" rel="stylesheet">
+        <link rel="shortcut icon" href="images/favicon.ico">
+
+        <script>
+
+            function log(){
+                window.location.href = "http://localhost:8383/CheaperLifeMobile/accueil.html";
+            }
+            
+            function register(){
+                window.location.href = "http://localhost:8383/CheaperLifeMobile/enregistrement.html";
+            }
+            
+            
+        </script>
+            
+            
+    </head>
+    <body>
+        <div id="containerBox">
+            <div class="container">
+                <!--<div class="demo-col">-->
+                
+                <!--Nom d'utilisateur-->
+                <div class="row">
+                    <div class="control-group span3" id="userame">
+                        <input type="text" id="usernameField" class="span3" placeholder="Enter your name" value="">
+                        <i class="input-icon fui-user"></i>
+                    </div>
+                </div>
+                    
+                <!--Mot de passe-->
+                <div class="row">
+                    <div class="control-group span3" id="password">
+                        <input type="password" id="passwordField" class="span3 " placeholder="Password" value="">
+                        <i class="input-icon fui-lock"></i>
+                    </div>
+                </div>
+                
+                <!--Remember me-->
+                <div class="row">
+                    <div class="span3">
+                        <label class="checkbox" for="checkbox">
+                            <span class="icons">
+                            <span class="first-icon fui-checkbox-unchecked"></span>
+                            <span class="second-icon fui-checkbox-checked"></span>
+                            </span>
+                            <input id="checkbox" type="checkbox" data-toggle="checkbox" value="">
+                            Remember me
+                        </label>
+                    </div>
+                </div>
+                    
+                <!--bouton log-in-->   
+                <div class="row">
+                    <div class="span3" id="log">
+                        <input type="button" id="logButton" value="Log in" onclick="log();" class="btn btn-primary btn-large btn-block">
+                    </div> 
+                </div>
+                
+                
+                <!--mot de passe oublie-->
+                <div class="row">
+                    <div class="span3">
+                        <a  href="http://google.com" target="_blank" title="Forgot password ?">Forgot password ? </a>
+                    </div>
+                </div>
+                <br>
+                <!--non enregistré-->
+                <div class="row">
+                    <div class="span3">
+                        Not registered yet ? 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="span3">
+                        <input type="button" id="registerbutton" value="Register" onclick="register();" class="btn btn-primary btn-large btn-block">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/jquery-1.8.3.min.js"></script>
+        <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+        <script src="js/jquery.ui.touch-punch.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap-select.js"></script>
+        <script src="js/bootstrap-switch.js"></script>
+        <script src="js/flatui-checkbox.js"></script>
+        <script src="js/flatui-radio.js"></script>
+        <script src="js/jquery.tagsinput.js"></script>
+        <script src="js/jquery.placeholder.js"></script>
+        <script src="js/jquery.stacktable.js"></script>
+        <script src="bootstrap/js/google-code-prettify/prettify.js"></script>
+        <script src="js/application.js"></script>
+    </body>
+</html>
