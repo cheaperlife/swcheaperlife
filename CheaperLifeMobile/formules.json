@@ -1,18 +1,18 @@
 {
     "formules": [{
             "id" : "formule1",
-            "name" : "formule du midi",
-            "description" : "sandwich + dessert",
+            "name" : "La Mie Câline",
+            "description" : "20 croissants par mois",
             "quantity" : "10",
             "price" : "50",
-            "duration" : "1"
+            "duration" : "12.11.2013"
         },{
             "id" : "formule2",
-            "name" : "formule du matin",
-            "description" : "croissant + cafe",
+            "name" : "La Brioche Dorée",
+            "description" : "20 donuts par mois",
             "quantity" : "10",
             "price" : "20",
-            "duration" : "1"
+            "duration" : "30.11.2013"
         }] 
             
 }
