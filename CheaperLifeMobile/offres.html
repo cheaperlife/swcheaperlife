@@ -8,16 +8,16 @@ and open the template in the editor.
     <head>
         <title>accueil</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <!-- Loading Bootstrap -->
+<!--         Loading Bootstrap 
         <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
         <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
         <link rel="stylesheet" href="bootstrap/css/prettify.css">
 
-        <!-- Loading Flat UI -->
+         Loading Flat UI 
         <link href="css/flat-ui.css" rel="stylesheet">
-        <link rel="stylesheet" href="css/demo.css">
+        <link rel="stylesheet" href="css/demo.css">-->
         <link href="css/style.css" rel="stylesheet">
-        <link rel="shortcut icon" href="images/favicon.ico">
+        <!--<link rel="shortcut icon" href="images/favicon.ico">-->
         
         <script type="text/javascript">
             
@@ -35,9 +35,9 @@ and open the template in the editor.
                             success: function(donnees){
                                 dataOffers = donnees;
 //                                alert(dataOffers.offres[1].price);
-                                var offre1 = dataOffers.offres[0].name + "<br/>" + dataOffers.offres[0].description + "<br/>"+ dataOffers.offres[0].oldPrice +" € "+ dataOffers.offres[0].newPrice +" € "+  "<br/>" + "A utiliser pendant : "+ dataOffers.offres[0].duration+ " mois";
+                                var offre1 = "<p class='titre'>"+ dataOffers.offres[0].name + "<br/>" + dataOffers.offres[0].description + "</p><p class='etat'> <span class='barre'>"+ dataOffers.offres[0].oldPrice +" € </span> <span class='bigPrice'>"+ dataOffers.offres[0].newPrice +" € </span>"+  "<br/>" + "A utiliser pendant : <span class='date'>"+ dataOffers.offres[0].duration+ " mois </span>";
                                 document.getElementById("offre1").innerHTML = offre1;
-                                var offre2 = dataOffers.offres[0].name + "<br/>"+ dataOffers.offres[1].description + "<br/>"+ dataOffers.offres[1].oldPrice +" € "+ dataOffers.offres[1].newPrice +" €"+ "<br/>"+ "A utiliser pendant : "+ dataOffers.offres[1].duration+ " mois";
+                                var offre2 = "<p class='titre'>"+ dataOffers.offres[0].name + "<br/>"+ dataOffers.offres[1].description + "</p><p class='etat'> <span class='barre'>"+ dataOffers.offres[1].oldPrice +" € </span> <span class='bigPrice'>"+ dataOffers.offres[1].newPrice +" € </span> "+ "<br/>"+ "A utiliser pendant : <span class='date'>"+ dataOffers.offres[1].duration+ " mois </span>";
                                 document.getElementById("offre2").innerHTML = offre2;
                             }
                         });
@@ -48,6 +48,8 @@ and open the template in the editor.
           function goOffers(){
               window.location.href = "http://localhost:8383/CheaperLifeMobile/accueil.html"
           }
+          
+          
         
             
             
@@ -70,43 +72,34 @@ and open the template in the editor.
             </div>
         </div>-->
 
-        <div>
-            <input type="button" value="Voir mes abonnements" onclick="goOffers();">
-        </div>
-        
-        <table class="sub">
-            <caption>
-                Les offres à proximité
-            </caption>
-            <tr>
-                <td>
-                    <div id="offre1">
-
-                    </div>
-                </td>
-                <td>
-                    <div id="buttonSub1">
-                        <input type="button" value="Voir l'offre" onclick="">
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div id="offre2">
-
-                    </div>
-                </td>
-                <td>
-                    <div id="buttonSub2">
-                        <input type="button" value="Voir l'offre" onclick="">
-                    </div>
-                </td>
-            </tr>
-                
-           
-                
-                
-                
+      
+<header>
+    <nav>
+        <a href="http://localhost:8383/CheaperLifeMobile/accueil.html" > Voir mes abonnements</a>
+    </nav>
+     
+    </header>
+    <h1>
+        Les offres à proximité
+    </h1>
+        <table class="subs">
+            <tbody>
+                <tr>
+                    <td id="offre1" class="description">
+                    </td>
+                    <td id="buttonSub1" class="buttonCell">
+                        <a href="#" > Voir l'offre</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="offre2" class="description">
+                    </td>
+                    <td id="buttonSub2" class="buttonCell">
+                        <a href="#" > Voir l'offre</a>
+                    </td>
+                </tr>
+            </tbody>
+            
         </table>
 
         <script src="js/jquery-1.8.3.min.js"></script>

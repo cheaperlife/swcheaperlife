@@ -37,9 +37,9 @@ and open the template in the editor.
                             success: function(donnees){
                                 dataFormules = donnees;
 //                                alert(dataFormules.formules[1].price);
-                                var description1 = dataFormules.formules[0].name + "<br/>"+ dataFormules.formules[0].description + "<br/>"+ "Quantité restante : "+ dataFormules.formules[0].quantity + "<br/>" + "Fin de validité : "+ dataFormules.formules[0].duration;
+                                var description1 = "<p class='titre'>" + dataFormules.formules[0].name + "<br/>"+ dataFormules.formules[0].description + "</p><p class='etat'>"+ "Quantité restante : "+ dataFormules.formules[0].quantity + "<br/>" + "Fin de validité : <span class='date'>"+ dataFormules.formules[0].duration+"</span>";
                                 document.getElementById("description1").innerHTML = description1;
-                                var description2 = dataFormules.formules[1].name + "<br/>"+ dataFormules.formules[1].description + "<br/>"+ "Quantité restante : "+ dataFormules.formules[1].quantity + "<br/>" + "Fin de validité : "+ dataFormules.formules[1].duration;
+                                var description2 = "<p class='titre'>" + dataFormules.formules[1].name + "<br/>"+ dataFormules.formules[1].description + "</p><p class='etat'>"+ "Quantité restante : "+ dataFormules.formules[1].quantity + "<br/>" + "Fin de validité : <span class='date'>"+ dataFormules.formules[1].duration+"</span>";
                                 document.getElementById("description2").innerHTML = description2;
                             }
                         });
