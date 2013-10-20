@@ -1,0 +1,20 @@
+{
+    "offres": [{
+            "id" : "offre1",
+            "name" : "La Mie Câline",
+            "description" : "20 croissants par mois",
+            "quantity" : "10",
+            "oldPrice" : "30",
+            "newPrice" : "20",
+            "duration" : "1"
+        },{
+            "id" : "offre2",
+            "name" : "La brioche dorée",
+            "description" : "20 sandwichs par mois",
+            "quantity" : "10",
+            "oldPrice" : "70",
+            "newPrice" : "50",
+            "duration" : "1"
+        }] 
+            
+}
